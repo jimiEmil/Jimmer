@@ -9,8 +9,6 @@ let mapSizeY = 600;
 let startPos = (0,0)
 
 let starSize = Math.random(2,9)
-let starPosX
-let starPosX
 function draw() {
   
   background(220);
@@ -23,8 +21,6 @@ function draw() {
 
   fill(100)
    rect(0, 0, 100, 100);
-
-cicle 
 
 
 }
