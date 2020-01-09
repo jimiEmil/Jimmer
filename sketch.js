@@ -3,6 +3,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
+
+let rotation = 1;
+
 let mapSizeX = 1000;
 let mapSizeY = 600;
 
@@ -22,5 +25,38 @@ function draw() {
   fill(100)
    rect(0, 0, 100, 100);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  if(keyIsDown(d)){
+    rotation += 0.05;
+  }
+  if(keyIsDown(a)){
+    rotation -= 0,05;
+  }
+
+
+   
 
 }
