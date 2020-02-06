@@ -14,6 +14,9 @@ function draw() {
   
 
   for (let i = 0; i < asteroids.length; i++) {
+    if (ship.hits(asteroids[i])){
+      console.log('Oooopsie!')
+    }
     asteroids[i].render();
     asteroids[i].update(); 
     asteroids[i].edges(); 
@@ -21,8 +24,14 @@ function draw() {
   for (let i = lasers.length-1; i >= 0; i--) {
     lasers[i].render();
     lasers[i].update(); 
+    if (lasers[i].offscreen()) {
+      lasers.splice(i, 1);
+    } else {
     for(let j = asteroids.length-1; j >= 0; j--){
-    if (lasers[i].hits(asteroids[j])){
+      if (lasers[i].offscreen()) {
+        lasers.splice(i, 1);
+      } else{
+      if (lasers[i].hits(asteroids[j])){
       if(asteroids[j].r > 10){
 
       let newAsteroids = asteroids[j].breakup();
@@ -32,10 +41,14 @@ function draw() {
       lasers.splice(i,1);
       break;
     }
+    }
    }
-
-
   }
+   
+ 
+  }
+  console.log(lasers.length); 
+
   ship.render();
   ship.turn();
   ship.update();
