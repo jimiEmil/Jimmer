@@ -1,6 +1,5 @@
-# Jimmer
-Asteroids
-hej jim jim
+# Asteroid spil - Jimi og Tobias
 
+prøv spillet her!
 
-hej med dig Tobi :))
+- [Asteroids spil](jimAstroids)
