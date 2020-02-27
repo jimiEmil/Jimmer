@@ -15,7 +15,7 @@ function draw() {
 
   fill(0, 102, 153);
   textSize(32);
-  text('Dine totalt seje Astroid kills:' + score, 10, 30);
+  text('Dine totalt seje Asteroid kills:' + score, 10, 30);
 
 
   for (let i = 0; i < asteroids.length; i++) {
